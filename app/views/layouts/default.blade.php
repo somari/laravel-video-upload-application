@@ -1,23 +1,6 @@
 <head>
 
-  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
-
   {{ HTML::style('css/bootstrap.min.css') }}
-
-  <!-- Optional theme -->
-  <!-- <link rel="stylesheet" href="css/theme.css"> -->
-
-  {{ HTML::style('css/theme.css') }}
-
-  <!-- <script src="js/jquery-1.11.1.js"></script> -->
-
-  {{ HTML::script('js/jquery-1.11.1.js') }}
-
-  <!-- <script src="js/bootstrap.min.js"></script> -->
-
-  {{ HTML::script('js/bootstrap.min.js') }}
-
-  {{ HTML::script('js/site_script.js') }}
 
 </head>
 <body>
@@ -30,7 +13,7 @@
 
     <div class="row-fluid">
 
-    @include('partials.sidebar')
+      @include('partials.sidebar')
 
       <div class="col-md-9 well admin-content" id="home">
         <p>
@@ -256,213 +239,37 @@
               </div>
 
 
-
-
-              <!-- Modal -->
-              <div class="modal fade" id="loginModal"  role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
+              <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="t_and_c_m" class="modal fade" style="display: none;">
+                <div class="modal-dialog modal-lg">
                   <div class="modal-content">
-
                     <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-
-                      <h4 class="modal-title" id="loginModalLabel">Login</h4>
+                      <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                      <h4 id="myModalLabel" class="modal-title">Terms &amp; Conditions</h4>
                     </div>
-
-
                     <div class="modal-body">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
 
-
-
-
-                      <div style="padding: 20px;" id="form-olvidado">
-                        <form accept-charset="UTF-8" role="form" id="login-form" method="post">
-                          <fieldset>
-                            <div class="form-group input-group">
-                              <span class="input-group-addon">
-                                @
-                              </span>
-                              <input class="form-control" placeholder="Email" name="email" type="email" required="" autofocus="">
-                            </div>
-                            <div class="form-group input-group">
-                              <span class="input-group-addon">
-                                <i class="glyphicon glyphicon-lock">
-                                </i>
-                              </span>
-                              <input class="form-control" placeholder="Password" name="password" type="password" value="" required="">
-                            </div>
-                            <div class="form-group">
-                              <button type="submit" class="btn btn-primary btn-block">
-                                Access
-                              </button>
-                              <p class="help-block">
-                                <a class="pull-right text-muted" href="#" id="olvidado"><small>Forgot your password?</small></a>
-                              </p>
-                            </div>
-                          </fieldset>
-                        </form>
-                      </div>
-                      <div style="display: none;" id="form-olvidado">
-                        <h4 class="">
-                          Forgot your password?
-                        </h4>
-
-                        <form accept-charset="UTF-8" role="form" id="login-recordar" method="post">
-                          <fieldset>
-                            <span class="help-block">
-                              Email address you use to log in to your account
-                              <br>
-                              We'll send you an email with instructions to choose a new password.
-                            </span>
-                            <div class="form-group input-group">
-                              <span class="input-group-addon">
-                                @
-                              </span>
-                              <input class="form-control" placeholder="Email" name="email" type="email" required="">
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block" id="btn-olvidado">
-                              Continue
-                            </button>
-                            <p class="help-block">
-                              <a class="text-muted" href="#" id="acceso"><small>Account Access</small></a>
-                            </p>
-                          </fieldset>
-                        </form>
-
-
-                      </div>
                     </div>
-
-
+                    <div class="modal-footer">
+                      <button data-dismiss="modal" class="btn btn-primary" type="button">I Agree</button>
+                    </div>
                   </div><!-- /.modal-content -->
-
-
-
-                </div>
+                </div><!-- /.modal-dialog -->
               </div>
 
+              @yield('modals') 
 
+              {{ HTML::script('js/jquery-1.11.1.js') }}
 
+              {{ HTML::script('js/bootstrap.min.js') }}
 
+              {{ HTML::script('js/site_script.js') }}
 
+              {{ HTML::script('js/jquery.validate.min.js') }}
 
-
-
-
-
-
-
-              <!-- Modal -->
-              <div class="modal fade" id="registerModal"  role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                      <h4 class="modal-title" id="registerModalLabel">Signup</h4>
-                    </div>
-
-
-
-                    <div class="modal-body">
-
-                      <div>
-                        <form role="form">
-
-                          <hr class="colorgraph">
-                          <div class="row-fluid">
-                            <div class="">
-                              <div class="form-group">
-                                <input type="text" placeholder="First Name" class="form-control input-lg" id="first_name" name="first_name">
-                              </div>
-                            </div>
-                            <div class="">
-                              <div class="form-group">
-                                <input type="text" placeholder="Last Name" class="form-control input-lg" id="last_name" name="last_name">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="form-group">
-                            <input type="email" placeholder="Email Address" class="form-control input-lg" id="email" name="email">
-                          </div>
-                          <div class="row-fluid">
-                            <div class="">
-                              <div class="form-group">
-                                <input type="password" placeholder="Password" class="form-control input-lg" id="password" name="password">
-                              </div>
-                            </div>
-                            <div class="">
-                              <div class="form-group">
-                                <input type="password" placeholder="Confirm Password" class="form-control input-lg" id="password_confirmation" name="password_confirmation">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row-fluid">
-                            <div class="col-xs-4 col-sm-3 col-md-3">
-                              <span class="button-checkbox">
-                                <button data-color="info" class="btn btn-info active" type="button"><i class="state-icon glyphicon glyphicon-check"></i>I Agree</button>
-                                <input type="checkbox" value="1" class="hidden" id="t_and_c" name="t_and_c">
-                              </span>
-                            </div>
-                            <div class="col-xs-8 col-sm-9 col-md-9">
-                             By clicking <strong class="label label-primary">Register</strong>, you agree to the 
-                             <a data-target="#t_and_c_m" data-toggle="modal" href="#">Terms and Conditions</a> set out by this site, including our Cookie Use.
-                           </div>
-                         </div>
-
-                         <hr class="colorgraph">
-                         <div class="row-fluid">
-                          <div class="col-xs-12 col-md-6"><input type="submit" class="btn btn-primary btn-block btn-lg" value="Register"></div>
-                          <div class="col-xs-12 col-md-6"><a class="btn btn-success btn-block btn-lg" href="#">Sign In</a></div>
-                        </div>
-                      </form>
-                    </div>
-
-
-
-
-                  </div><!-- END .modal-body --> 
-
-                  <div class="modal-footer">
-
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-
-
-
-            <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="t_and_c_m" class="modal fade" style="display: none;">
-              <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                    <h4 id="myModalLabel" class="modal-title">Terms &amp; Conditions</h4>
-                  </div>
-                  <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, itaque, modi, aliquam nostrum at sapiente consequuntur natus odio reiciendis perferendis rem nisi tempore possimus ipsa porro delectus quidem dolorem ad.</p>
-
-                  </div>
-                  <div class="modal-footer">
-                    <button data-dismiss="modal" class="btn btn-primary" type="button">I Agree</button>
-                  </div>
-                </div><!-- /.modal-content -->
-              </div><!-- /.modal-dialog -->
-            </div>
-
-
-
-
-
-
-
-
-
-
-
-          </body>
+              {{ HTML::script('js/main.js') }}
+              
+            </body>
 
 

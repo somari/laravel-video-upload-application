@@ -15,3 +15,5 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::post('user_register', ['as' => 'user_register', 'uses' => 'UsersController@register']);
