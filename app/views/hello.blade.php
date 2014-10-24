@@ -122,7 +122,7 @@
                 <div class="form-group">
                   <input type="password" placeholder="Password" data-rule-required="true" data-msg-required="Please provide Password" 
                   data-rule-minlength="6" class="form-control input-lg" id="password" name="password"/>
-                </div>
+                </div> 
               </div>
               <div class="">
                 <div class="form-group">
