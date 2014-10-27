@@ -57,49 +57,8 @@
 
 
       </div>
-      <div class="col-md-9 well admin-content" id="allUsers">
-        Display all registered users 
-
-        <table class="table table-bordered table-hover">
-
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>email</th>
-              <th>type</th>
-            </tr>
-          </thead>
-
-
-          <tbody>
-
-            <tr>
-              <td>1</td>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>mike@mdo.com</td>
-              <td>admin</td>
-            </tr>
-
-            <tr>
-              <td>2</td>
-              <td>owen</td>
-              <td>shadingberg</td>
-              <td>owen@mdko.com</td>
-              <td>user</td>
-            </tr>
-
-
-
-          </tbody>
-
-
-        </table>
-
-
-      </div> <!-- END .col-md-9 #allUsers -->  
+      
+      @yield('all_users')
 
 
       <div class="col-md-9 well admin-content" id="allVideos">
