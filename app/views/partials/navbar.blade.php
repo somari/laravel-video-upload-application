@@ -4,6 +4,8 @@
 			
 
 			<div style="padding: 7px 0px 0px;" class="pull-right">
+				
+				@if(!Sentry::check())
 				<!-- Button trigger modal -->
 				<button class="btn btn-primary btn" data-toggle="modal" data-target="#registerModal">
 					Signup
@@ -13,10 +15,11 @@
 				<button class="btn btn-primary btn" data-toggle="modal" data-target="#loginModal">
 					Login
 				</button>
-
+				@else
 				<button class="btn btn-primary btn">
-					Logout
+					<a href="{{ URL::route('user_logout') }}" style="color:white">Logout</a>
 				</button>
+				@endif
 
 			</div>
 
